@@ -1,0 +1,21 @@
+spring:
+  redis:
+    sentinel:
+      nodes: 192.168.233.149:26379
+      master: mymaster
+    lettuce:
+      pool:
+        max-idle: 100
+        max-wait: 60000ms
+        min-idle: 2
+        max-active: 2500
+  local-redis:
+    sentinel:
+      nodes: 192.168.233.149:26379
+      master: mymaster
+    lettuce:
+      pool:
+        max-idle: 100
+        max-wait: 60000
+        min-idle: 2
+        max-active: 2500
